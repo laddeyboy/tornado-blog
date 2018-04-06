@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome to jladdy.org {% endblock %}
+
+
+{% block content %}
+ <h1>Check out all of my articles</h1>
+ <ul>
+    {% for post in posts %}
+    <li>
+        <h4>
+            <a href="/post/{{post['slug']}}">{{post['title']}}</a>
+        </h4>
+    </li>
+    {% endfor %}
+ </ul>
+
+    <h3><a href="/authors/">Here is a list of our Contributing Authors</a></h3>
+
+{% endblock %}
+
+
+    
